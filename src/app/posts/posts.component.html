@@ -1,0 +1,11 @@
+<!-- posts.component.html -->
+<div class="posts-container">
+  <div *ngFor="let post of posts" class="post-card">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <button (click)="loadComments(post.id)">Show Comments</button>
+    <div *ngIf="showComments[post.id]">
+      <app-comments [postId]="post.id"></app-comments>
+    </div>
+  </div>
+</div>

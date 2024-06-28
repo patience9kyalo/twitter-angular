@@ -1,0 +1,10 @@
+<!-- profile.component.html -->
+<div class="profiles-container">
+    <div *ngFor="let user of users" class="profile-card">
+      <img src="assets/profile-placeholder.png" alt="Profile picture">
+      <h2>{{ user.name }}</h2>
+      <p>Email: {{ user.email }}</p>
+      <p>Username: {{ user.username }}</p>
+    </div>
+  </div>
+  
